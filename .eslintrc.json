@@ -12,7 +12,16 @@
   },
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
+    "linebreak-style": ["error", "windows"],
     "no-console": "off",
-    "prettier/prettier": 2
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "import/extensions": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
   }
 }
